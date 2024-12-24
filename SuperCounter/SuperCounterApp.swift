@@ -6,12 +6,14 @@
 //
 
 import SwiftUI
+import SwiftData
 
 @main
 struct SuperCounterApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TallySelectionView()
         }
+        .modelContainer(for: Tally.self)
     }
 }
