@@ -10,6 +10,7 @@ import SwiftData
 import WidgetKit
 
 struct TallySelectionView: View {
+    @Environment(Router.self) var router
     @Query(sort: \Tally.name) var tallies: [Tally]
     @State private var selectedTally: Tally?
     @Environment(\.modelContext) var modelContext
@@ -135,6 +136,11 @@ struct TallySelectionView: View {
                     id = UUID()
                 }
             }
+            .onChange(of: router.tallyName) { oldValue, newValue in
+                if newValue != selectedTally?.name {
+                    selectedTally = tallies.first(where: { $0.name == newValue })
+                }
+            }
         }
     }
 }
@@ -144,8 +150,10 @@ struct TallySelectionView: View {
 
 #Preview("Mock Data", traits: .mockData) {
     TallySelectionView()
+        .environment(Router())
 }
 
 #Preview("Empty") {
     TallySelectionView()
+        .environment(Router())
 }

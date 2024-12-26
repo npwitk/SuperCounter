@@ -12,5 +12,6 @@ import SwiftUI
 struct SuperCounterWidgetBundle: WidgetBundle {
     var body: some Widget {
         FirstTallyWidget()
+        ConfigurableWidget()
     }
 }
