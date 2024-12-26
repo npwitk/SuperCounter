@@ -7,7 +7,25 @@
 		<key>SuperCounter.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>SuperCounterWidgetExtension.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>955B23FC2D1BC06D00D9DAC0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>95D7CD542D1ADE1800F1F67A</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

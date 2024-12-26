@@ -7,9 +7,10 @@
 
 import SwiftUI
 import SwiftData
+import WidgetKit
 
 struct NewTallyView: View {
-    @Environment(\.modelContext) var context
+    @Environment(\.modelContext) var modelContext
     @Environment(\.dismiss) var dismiss
     @Environment(\.colorScheme) var colorScheme
     
@@ -47,8 +48,9 @@ struct NewTallyView: View {
                 Button {
                     let newTally = Tally(name: name)
                     withAnimation {
-                        context.insert(newTally)
-                        try? context.save()
+                        modelContext.insert(newTally)
+                        try? modelContext.save()
+                        WidgetCenter.shared.reloadAllTimelines()
                         selectedTally = newTally
                         dismiss()
                     }

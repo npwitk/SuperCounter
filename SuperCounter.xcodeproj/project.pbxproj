@@ -6,19 +6,91 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		955B24002D1BC06D00D9DAC0 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 955B23FF2D1BC06D00D9DAC0 /* WidgetKit.framework */; };
+		955B24022D1BC06D00D9DAC0 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 955B24012D1BC06D00D9DAC0 /* SwiftUI.framework */; };
+		955B240D2D1BC06F00D9DAC0 /* SuperCounterWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 955B23FD2D1BC06D00D9DAC0 /* SuperCounterWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		955B240B2D1BC06F00D9DAC0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 95D7CD4D2D1ADE1800F1F67A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 955B23FC2D1BC06D00D9DAC0;
+			remoteInfo = SuperCounterWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		955B24122D1BC06F00D9DAC0 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				955B240D2D1BC06F00D9DAC0 /* SuperCounterWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		955B23FD2D1BC06D00D9DAC0 /* SuperCounterWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SuperCounterWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		955B23FF2D1BC06D00D9DAC0 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		955B24012D1BC06D00D9DAC0 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		955B24132D1BC09300D9DAC0 /* SuperCounterWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SuperCounterWidgetExtension.entitlements; sourceTree = "<group>"; };
 		95D7CD552D1ADE1800F1F67A /* SuperCounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperCounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		955B240E2D1BC06F00D9DAC0 /* Exceptions for "SuperCounterWidget" folder in "SuperCounterWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 955B23FC2D1BC06D00D9DAC0 /* SuperCounterWidgetExtension */;
+		};
+		955B24152D1BC22900D9DAC0 /* Exceptions for "SuperCounter" folder in "SuperCounterWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				SingleTallyView.swift,
+				Tally.swift,
+			);
+			target = 955B23FC2D1BC06D00D9DAC0 /* SuperCounterWidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		955B24032D1BC06D00D9DAC0 /* SuperCounterWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				955B240E2D1BC06F00D9DAC0 /* Exceptions for "SuperCounterWidget" folder in "SuperCounterWidgetExtension" target */,
+			);
+			path = SuperCounterWidget;
+			sourceTree = "<group>";
+		};
 		95D7CD572D1ADE1800F1F67A /* SuperCounter */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				955B24152D1BC22900D9DAC0 /* Exceptions for "SuperCounter" folder in "SuperCounterWidgetExtension" target */,
+			);
 			path = SuperCounter;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		955B23FA2D1BC06D00D9DAC0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				955B24022D1BC06D00D9DAC0 /* SwiftUI.framework in Frameworks */,
+				955B24002D1BC06D00D9DAC0 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		95D7CD522D1ADE1800F1F67A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -29,10 +101,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		955B23FE2D1BC06D00D9DAC0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				955B23FF2D1BC06D00D9DAC0 /* WidgetKit.framework */,
+				955B24012D1BC06D00D9DAC0 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		95D7CD4C2D1ADE1800F1F67A = {
 			isa = PBXGroup;
 			children = (
+				955B24132D1BC09300D9DAC0 /* SuperCounterWidgetExtension.entitlements */,
 				95D7CD572D1ADE1800F1F67A /* SuperCounter */,
+				955B24032D1BC06D00D9DAC0 /* SuperCounterWidget */,
+				955B23FE2D1BC06D00D9DAC0 /* Frameworks */,
 				95D7CD562D1ADE1800F1F67A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				95D7CD552D1ADE1800F1F67A /* SuperCounter.app */,
+				955B23FD2D1BC06D00D9DAC0 /* SuperCounterWidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -48,6 +133,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		955B23FC2D1BC06D00D9DAC0 /* SuperCounterWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 955B240F2D1BC06F00D9DAC0 /* Build configuration list for PBXNativeTarget "SuperCounterWidgetExtension" */;
+			buildPhases = (
+				955B23F92D1BC06D00D9DAC0 /* Sources */,
+				955B23FA2D1BC06D00D9DAC0 /* Frameworks */,
+				955B23FB2D1BC06D00D9DAC0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				955B24032D1BC06D00D9DAC0 /* SuperCounterWidget */,
+			);
+			name = SuperCounterWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = SuperCounterWidgetExtension;
+			productReference = 955B23FD2D1BC06D00D9DAC0 /* SuperCounterWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		95D7CD542D1ADE1800F1F67A /* SuperCounter */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 95D7CD632D1ADE1900F1F67A /* Build configuration list for PBXNativeTarget "SuperCounter" */;
@@ -55,10 +162,12 @@
 				95D7CD512D1ADE1800F1F67A /* Sources */,
 				95D7CD522D1ADE1800F1F67A /* Frameworks */,
 				95D7CD532D1ADE1800F1F67A /* Resources */,
+				955B24122D1BC06F00D9DAC0 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				955B240C2D1BC06F00D9DAC0 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				95D7CD572D1ADE1800F1F67A /* SuperCounter */,
@@ -80,6 +189,9 @@
 				LastSwiftUpdateCheck = 1610;
 				LastUpgradeCheck = 1610;
 				TargetAttributes = {
+					955B23FC2D1BC06D00D9DAC0 = {
+						CreatedOnToolsVersion = 16.1;
+					};
 					95D7CD542D1ADE1800F1F67A = {
 						CreatedOnToolsVersion = 16.1;
 					};
@@ -100,11 +212,19 @@
 			projectRoot = "";
 			targets = (
 				95D7CD542D1ADE1800F1F67A /* SuperCounter */,
+				955B23FC2D1BC06D00D9DAC0 /* SuperCounterWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		955B23FB2D1BC06D00D9DAC0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		95D7CD532D1ADE1800F1F67A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -115,6 +235,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		955B23F92D1BC06D00D9DAC0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		95D7CD512D1ADE1800F1F67A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -124,7 +251,71 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		955B240C2D1BC06F00D9DAC0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 955B23FC2D1BC06D00D9DAC0 /* SuperCounterWidgetExtension */;
+			targetProxy = 955B240B2D1BC06F00D9DAC0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
+		955B24102D1BC06F00D9DAC0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = SuperCounterWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5UTY23TYW4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SuperCounterWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SuperCounterWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = npwitk.SuperCounter.SuperCounterWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		955B24112D1BC06F00D9DAC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = SuperCounterWidgetExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 5UTY23TYW4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SuperCounterWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = SuperCounterWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = npwitk.SuperCounter.SuperCounterWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		95D7CD612D1ADE1900F1F67A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -249,6 +440,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SuperCounter/SuperCounter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SuperCounter/Preview Content\"";
@@ -278,6 +470,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SuperCounter/SuperCounter.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SuperCounter/Preview Content\"";
@@ -305,6 +498,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		955B240F2D1BC06F00D9DAC0 /* Build configuration list for PBXNativeTarget "SuperCounterWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				955B24102D1BC06F00D9DAC0 /* Debug */,
+				955B24112D1BC06F00D9DAC0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		95D7CD502D1ADE1800F1F67A /* Build configuration list for PBXProject "SuperCounter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
