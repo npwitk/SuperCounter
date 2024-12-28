@@ -10,6 +10,8 @@ import AppIntents
 struct MyTalliesShortcuts: AppShortcutsProvider {
     
     static var appShortcuts: [AppShortcut] {
+        
+        // First widget
         //        AppShortcut(intent: UpdateTallyIntent(),
         //                    phrases: [
         //                        "Update \(.applicationName)"
