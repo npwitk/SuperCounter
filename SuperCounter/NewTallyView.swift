@@ -52,6 +52,7 @@ struct NewTallyView: View {
                         try? modelContext.save()
                         WidgetCenter.shared.reloadAllTimelines()
                         selectedTally = newTally
+                        MyTalliesShortcuts.updateAppShortcutParameters()
                         dismiss()
                     }
                 } label: {

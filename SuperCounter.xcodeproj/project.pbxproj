@@ -60,12 +60,22 @@
 			);
 			target = 955B23FC2D1BC06D00D9DAC0 /* SuperCounterWidgetExtension */;
 		};
+		956A8D2A2D1F9627004F71D4 /* Exceptions for "SuperCounterWidget" folder in "SuperCounter" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				ConfigurableWidget/TallyEntity.swift,
+				ConfigurableWidget/TallyQuery.swift,
+				UpdateTallyIntent.swift,
+			);
+			target = 95D7CD542D1ADE1800F1F67A /* SuperCounter */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		955B24032D1BC06D00D9DAC0 /* SuperCounterWidget */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
+				956A8D2A2D1F9627004F71D4 /* Exceptions for "SuperCounterWidget" folder in "SuperCounter" target */,
 				955B240E2D1BC06F00D9DAC0 /* Exceptions for "SuperCounterWidget" folder in "SuperCounterWidgetExtension" target */,
 			);
 			path = SuperCounterWidget;
