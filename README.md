@@ -22,4 +22,9 @@ Super Counter is a simple counter app that allows users to easily add new counte
 
 ## Screenshots
 
-(TBA)
+![](https://raw.githubusercontent.com/npwitk/SuperCounter/refs/heads/iOS/Screenshots/Screenshots_1_L.png#gh-light-mode-only)
+![](https://raw.githubusercontent.com/npwitk/SuperCounter/refs/heads/iOS/Screenshots/Screenshots_1_D.png#gh-dark-mode-only)
+![](https://raw.githubusercontent.com/npwitk/SuperCounter/refs/heads/iOS/Screenshots/Screenshots_2_L.png#gh-light-mode-only)
+![](https://raw.githubusercontent.com/npwitk/SuperCounter/refs/heads/iOS/Screenshots/Screenshots_2_D.png#gh-dark-mode-only)
+![](https://raw.githubusercontent.com/npwitk/SuperCounter/refs/heads/iOS/Screenshots/Screenshots_3_L.png#gh-light-mode-only)
+![](https://raw.githubusercontent.com/npwitk/SuperCounter/refs/heads/iOS/Screenshots/Screenshots_3_D.png#gh-dark-mode-only)
