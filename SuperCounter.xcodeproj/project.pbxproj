@@ -10,6 +10,7 @@
 		955B24002D1BC06D00D9DAC0 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 955B23FF2D1BC06D00D9DAC0 /* WidgetKit.framework */; };
 		955B24022D1BC06D00D9DAC0 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 955B24012D1BC06D00D9DAC0 /* SwiftUI.framework */; };
 		955B240D2D1BC06F00D9DAC0 /* SuperCounterWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 955B23FD2D1BC06D00D9DAC0 /* SuperCounterWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		95DDCAD92D2171660075F5B7 /* SuperCounterWatch Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 95DDCACC2D2171650075F5B7 /* SuperCounterWatch Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -19,6 +20,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 955B23FC2D1BC06D00D9DAC0;
 			remoteInfo = SuperCounterWidgetExtension;
+		};
+		95DDCAD72D2171660075F5B7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 95D7CD4D2D1ADE1800F1F67A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 95DDCACB2D2171650075F5B7;
+			remoteInfo = "SuperCounterWatch Watch App";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -34,6 +42,17 @@
 			name = "Embed Foundation Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		95DDCADA2D2171660075F5B7 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				95DDCAD92D2171660075F5B7 /* SuperCounterWatch Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +61,7 @@
 		955B24012D1BC06D00D9DAC0 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		955B24132D1BC09300D9DAC0 /* SuperCounterWidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SuperCounterWidgetExtension.entitlements; sourceTree = "<group>"; };
 		95D7CD552D1ADE1800F1F67A /* SuperCounter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperCounter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		95DDCACC2D2171650075F5B7 /* SuperCounterWatch Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SuperCounterWatch Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -69,6 +89,13 @@
 			);
 			target = 95D7CD542D1ADE1800F1F67A /* SuperCounter */;
 		};
+		95DDCAE72D2176950075F5B7 /* Exceptions for "SuperCounterWatch Watch App" folder in "SuperCounter" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				WatchTally.swift,
+			);
+			target = 95D7CD542D1ADE1800F1F67A /* SuperCounter */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -89,6 +116,14 @@
 			path = SuperCounter;
 			sourceTree = "<group>";
 		};
+		95DDCACD2D2171650075F5B7 /* SuperCounterWatch Watch App */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				95DDCAE72D2176950075F5B7 /* Exceptions for "SuperCounterWatch Watch App" folder in "SuperCounter" target */,
+			);
+			path = "SuperCounterWatch Watch App";
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +137,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		95D7CD522D1ADE1800F1F67A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95DDCAC92D2171650075F5B7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -126,6 +168,7 @@
 				955B24132D1BC09300D9DAC0 /* SuperCounterWidgetExtension.entitlements */,
 				95D7CD572D1ADE1800F1F67A /* SuperCounter */,
 				955B24032D1BC06D00D9DAC0 /* SuperCounterWidget */,
+				95DDCACD2D2171650075F5B7 /* SuperCounterWatch Watch App */,
 				955B23FE2D1BC06D00D9DAC0 /* Frameworks */,
 				95D7CD562D1ADE1800F1F67A /* Products */,
 			);
@@ -136,6 +179,7 @@
 			children = (
 				95D7CD552D1ADE1800F1F67A /* SuperCounter.app */,
 				955B23FD2D1BC06D00D9DAC0 /* SuperCounterWidgetExtension.appex */,
+				95DDCACC2D2171650075F5B7 /* SuperCounterWatch Watch App.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -173,11 +217,13 @@
 				95D7CD522D1ADE1800F1F67A /* Frameworks */,
 				95D7CD532D1ADE1800F1F67A /* Resources */,
 				955B24122D1BC06F00D9DAC0 /* Embed Foundation Extensions */,
+				95DDCADA2D2171660075F5B7 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				955B240C2D1BC06F00D9DAC0 /* PBXTargetDependency */,
+				95DDCAD82D2171660075F5B7 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				95D7CD572D1ADE1800F1F67A /* SuperCounter */,
@@ -189,6 +235,28 @@
 			productReference = 95D7CD552D1ADE1800F1F67A /* SuperCounter.app */;
 			productType = "com.apple.product-type.application";
 		};
+		95DDCACB2D2171650075F5B7 /* SuperCounterWatch Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95DDCADD2D2171660075F5B7 /* Build configuration list for PBXNativeTarget "SuperCounterWatch Watch App" */;
+			buildPhases = (
+				95DDCAC82D2171650075F5B7 /* Sources */,
+				95DDCAC92D2171650075F5B7 /* Frameworks */,
+				95DDCACA2D2171650075F5B7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				95DDCACD2D2171650075F5B7 /* SuperCounterWatch Watch App */,
+			);
+			name = "SuperCounterWatch Watch App";
+			packageProductDependencies = (
+			);
+			productName = "SuperCounterWatch Watch App";
+			productReference = 95DDCACC2D2171650075F5B7 /* SuperCounterWatch Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -196,7 +264,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1610;
+				LastSwiftUpdateCheck = 1620;
 				LastUpgradeCheck = 1610;
 				TargetAttributes = {
 					955B23FC2D1BC06D00D9DAC0 = {
@@ -204,6 +272,9 @@
 					};
 					95D7CD542D1ADE1800F1F67A = {
 						CreatedOnToolsVersion = 16.1;
+					};
+					95DDCACB2D2171650075F5B7 = {
+						CreatedOnToolsVersion = 16.2;
 					};
 				};
 			};
@@ -223,6 +294,7 @@
 			targets = (
 				95D7CD542D1ADE1800F1F67A /* SuperCounter */,
 				955B23FC2D1BC06D00D9DAC0 /* SuperCounterWidgetExtension */,
+				95DDCACB2D2171650075F5B7 /* SuperCounterWatch Watch App */,
 			);
 		};
 /* End PBXProject section */
@@ -236,6 +308,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		95D7CD532D1ADE1800F1F67A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		95DDCACA2D2171650075F5B7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -259,6 +338,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		95DDCAC82D2171650075F5B7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -266,6 +352,11 @@
 			isa = PBXTargetDependency;
 			target = 955B23FC2D1BC06D00D9DAC0 /* SuperCounterWidgetExtension */;
 			targetProxy = 955B240B2D1BC06F00D9DAC0 /* PBXContainerItemProxy */;
+		};
+		95DDCAD82D2171660075F5B7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 95DDCACB2D2171650075F5B7 /* SuperCounterWatch Watch App */;
+			targetProxy = 95DDCAD72D2171660075F5B7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -505,6 +596,66 @@
 			};
 			name = Release;
 		};
+		95DDCADB2D2171660075F5B7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SuperCounterWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 5UTY23TYW4;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = SuperCounterWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = npwitk.SuperCounter;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = npwitk.SuperCounter.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Debug;
+		};
+		95DDCADC2D2171660075F5B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"SuperCounterWatch Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = 5UTY23TYW4;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = SuperCounterWatch;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = npwitk.SuperCounter;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = npwitk.SuperCounter.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 11.2;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -531,6 +682,15 @@
 			buildConfigurations = (
 				95D7CD642D1ADE1900F1F67A /* Debug */,
 				95D7CD652D1ADE1900F1F67A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95DDCADD2D2171660075F5B7 /* Build configuration list for PBXNativeTarget "SuperCounterWatch Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95DDCADB2D2171660075F5B7 /* Debug */,
+				95DDCADC2D2171660075F5B7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
