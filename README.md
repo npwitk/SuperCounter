@@ -1,4 +1,7 @@
 # Super Counter
+> [!NOTE]
+> The complete project, including both the iOS and watchOS apps, can be found in the [`watchOS`](https://github.com/npwitk/SuperCounter/tree/watchOS) branch.
+
 
 Super Counter is a simple counter app that allows users to easily add new counters, adjust values, and access the first tally via a widget. The app supports configurable widgets powered by AppIntent, and it integrates with Siri Shortcuts for quick updates.
 
