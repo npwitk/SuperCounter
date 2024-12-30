@@ -61,6 +61,22 @@ struct TallySelectionView: View {
                     if let selectedTally {
                         VStack(spacing: 24) {
                             SingleTallyView(size: 100, tally: selectedTally)
+                                .onTapGesture {
+                                    withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
+                                        selectedTally.increase()
+                                        try? modelContext.save()
+                                        WidgetCenter.shared.reloadAllTimelines()
+                                        connectivity.updateSelectedTally(selectedTally: selectedTally)
+                                    }
+                                }
+                                .onTapGesture(count: 2) {
+                                    withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
+                                        selectedTally.decrease()
+                                        try? modelContext.save()
+                                        WidgetCenter.shared.reloadAllTimelines()
+                                        connectivity.updateSelectedTally(selectedTally: selectedTally)
+                                    }
+                                }
                                 .padding(.vertical)
                             
                             Button {
@@ -68,6 +84,7 @@ struct TallySelectionView: View {
                                     selectedTally.reset()
                                     try? modelContext.save()
                                     WidgetCenter.shared.reloadAllTimelines()
+                                    connectivity.updateSelectedTally(selectedTally: selectedTally)
                                 }
                             } label: {
                                 Label("Reset", systemImage: "arrow.counterclockwise")
@@ -117,13 +134,17 @@ struct TallySelectionView: View {
                             if !tallies.isEmpty {
                                 self.selectedTally = tallies.first!
                             }
+                            MyTalliesShortcuts.updateAppShortcutParameters()
+                            connectivity.sendUpdatedTallies(tallies: tallies)
                         }
                     }
                 }
             } message: {
                 Text("Are you sure you want to delete this counter?")
             }
-            .sheet(isPresented: $newTally) {
+            .sheet(isPresented: $newTally, onDismiss: {
+                connectivity.sendUpdatedTallies(tallies: tallies)
+            }) {
                 NewTallyView(selectedTally: self.$selectedTally)
                     .presentationDetents([.height(250)])
             }
@@ -135,12 +156,16 @@ struct TallySelectionView: View {
             .onChange(of: scenePhase) {
                 if scenePhase == .active {
                     id = UUID()
+                    connectivity.sendUpdatedTallies(tallies: tallies)
                 }
             }
             .onChange(of: router.tallyName) { oldValue, newValue in
                 if newValue != selectedTally?.name {
                     selectedTally = tallies.first(where: { $0.name == newValue })
                 }
+            }
+            .onChange(of: connectivity.id) {
+                id = connectivity.id
             }
         }
     }

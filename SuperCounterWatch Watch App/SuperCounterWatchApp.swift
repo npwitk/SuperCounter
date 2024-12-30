@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct SuperCounterWatch_Watch_AppApp: App {
+    
+    @State private var tallyManager = TallyManager.shared
+    
     var body: some Scene {
         WindowGroup {
             TallyUpdateView()
+                .environment(tallyManager)
         }
     }
 }

@@ -40,10 +40,12 @@ struct UpdateNamedTallyIntent: AppIntent {
         let container = try! ModelContainer(for: Tally.self)
         let predicate = #Predicate<Tally> { $0.name == name }
         let descriptor = FetchDescriptor<Tally>(predicate: predicate)
+        let connectivity = iOSConnectivity.shared
         let foundTallies = try? container.mainContext.fetch(descriptor)
         if let tally = foundTallies?.first {
             tally.increase()
             try? container.mainContext.save()
+            connectivity.updateSelectedTally(selectedTally: tally)
             return tally.value
         }
         return 0

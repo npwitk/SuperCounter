@@ -47,6 +47,8 @@ struct SingleTallyView: View {
             .onTapGesture {
                 withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
                     tallyManager.increaseSelected()
+                    let connectivity = watchOSConnectivity.shared
+                    connectivity.updateSelectedTally(selectedTally: tallyManager.selectedTally)
                 }
             }
         }

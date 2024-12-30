@@ -17,7 +17,8 @@ struct WatchTally: Identifiable, Hashable, Codable {
     static var mockTallies: [WatchTally] {
         [
             WatchTally(name: "Alpha"),
-            WatchTally(name: "Beta", value: 10)
+            WatchTally(name: "Beta", value: 10),
+            WatchTally(name: "Gamma", value: 999)
         ]
     }
 }

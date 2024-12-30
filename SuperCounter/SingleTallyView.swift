@@ -14,14 +14,13 @@ struct SingleTallyView: View {
     @Bindable var tally: Tally
     @Environment(\.modelContext) var context
     @Environment(\.colorScheme) var colorScheme
-    @State private var isCountingDown = false
     
     var body: some View {
         Text("\(tally.value)")
             .font(.system(size: size, weight: .bold, design: .rounded))
             .monospacedDigit()
             .foregroundStyle(.primary)
-            .contentTransition(.numericText(countsDown: isCountingDown))
+            .contentTransition(.numericText())
             .minimumScaleFactor(0.5)
             .padding()
             .frame(maxWidth: size * 2, maxHeight: size * 2)
@@ -44,22 +43,7 @@ struct SingleTallyView: View {
                         )
                 }
             )
-            .onTapGesture {
-                isCountingDown = false
-                withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
-                    tally.increase()
-                    try? context.save()
-                    WidgetCenter.shared.reloadAllTimelines()
-                }
-            }
-            .onTapGesture(count: 2) {
-                isCountingDown = true
-                withAnimation(.spring(response: 0.3, dampingFraction: 0.7)) {
-                    tally.decrease()
-                    try? context.save()
-                    WidgetCenter.shared.reloadAllTimelines()
-                }
-            }
+            
     }
 }
 
